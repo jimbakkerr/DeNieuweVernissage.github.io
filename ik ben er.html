@@ -19,16 +19,16 @@
             <button class="white-button" type="submit">stuur</button>
           </form>
 
-          <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzgW8gn95RdQmwBvfhvqSm2g8wge_0hgQSkA2QlhQTYB4-bYanvm9xZ3qOqakLtbCFG_Q/exec';
-            const form = document.forms['submit-to-google-sheet'];
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault();
-              fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => window.location.href = "tot dan.html")
-                .catch(error => console.error('Error!', error.message));
-            });
-          </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzgW8gn95RdQmwBvfhvqSm2g8wge_0hgQSkA2QlhQTYB4-bYanvm9xZ3qOqakLtbCFG_Q/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
