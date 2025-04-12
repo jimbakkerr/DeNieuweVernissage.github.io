@@ -1,0 +1,333 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+body {
+
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+font-weight:600;
+overflow-y: hidden;
+overflow-x: hidden;
+margin: 0;
+height: 100vh;
+}
+
+.denieuwe {
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    left: 20px;
+    text-align: left;
+}
+
+.vernissage {
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    right: 20px;
+    text-align: right;
+}
+
+.wat {
+    position: absolute;
+    display: inline-block;
+    left: 20px;
+    bottom: 20px;
+    cursor: help;
+}
+
+.watuitleg {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+  }
+  
+  .wat:hover .watuitleg {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .watuitleg2 {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    top: 50%;
+left: 40.1%;
+transform: translate(-50%, -50%);
+  }
+  
+.whitebox1:hover .watuitleg2 {
+    opacity: 1;
+    visibility: visible;
+  }
+
+.container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px; /* or whatever fits your layout */
+    height: 300px;
+top: 50%;
+left: 55.5%;
+transform: translate(-50%, -50%);
+gap: 10px;
+  }
+
+  .whitebox {
+    flex: 0 0 40%; /* 50% width = 2 per row */
+    background-color: #f8f2ed;
+    box-sizing: border-box;
+    padding: 10px;
+    vertical-align: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .whitebox1 {
+    flex: 0 0 40%; /* 50% width = 2 per row */
+    background-color: #f8f2ed;
+    box-sizing: border-box;
+    padding: 10px;
+    vertical-align: auto;
+    cursor: default;
+    display: flex;
+    align-items: center;
+  }
+
+  .bluebox {
+    flex: 0 0 40%; /* 50% width = 2 per row */
+    background-color: #00558b;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .bluebox1 {
+    flex: 0 0 40%; /* 50% width = 2 per row */
+    background-color: #00558b;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: copy;
+    display: flex;
+    align-items: center;
+  }
+
+  .yellowbox {
+    flex: 0 0 40%; /* 50% width = 2 per row */
+    background-color: #ffdb05;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .yellowbox1 {
+    flex: 0 0 40%; /* 50% width = 2 per row */
+    background-color: #ffdb05;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .orangebox {
+    flex: 0 0 40%; /* 50% width = 2 per row */
+    background-color: #ed6b09;
+    box-sizing: border-box;
+    padding: 10px;
+    vertical-align: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+.orangebox1 {
+    flex: 0 0 40%; /* 50% width = 2 per row */
+    background-color: #ed6b09;
+    box-sizing: border-box;
+    padding: 5px;
+    vertical-align: auto;
+    cursor: default;
+    display: flex;
+    align-items: center;
+  }
+
+  .boxemail {
+    position: absolute;
+    display: flex;
+    align-items: center;       /* center vertically */
+    width: 600px;
+    height: 55px;
+    background-color: #f8f2ed;
+    top: 50%;
+    left: 380px;
+    transform: translateY(-50%); /* center box itself vertically */
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  
+  .boxmailtext, .yellowbalktext {
+    font-size: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    transform: translateY(5%);
+  }
+
+  .bluebalktext {
+    font-size: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    transform: translateY(5%);
+    color: white;
+  }
+
+  .yellowbalk {
+    position: absolute;
+    display: flex;
+    align-items: center;       /* center vertically */
+    width: 600px;
+    height: 55px;
+    background-color:  #ffdb05;
+    top: 50%;
+    left: 380px;
+    transform: translateY(-50%); /* center box itself vertically */
+    padding: 0 10px;
+    overflow: hidden;
+  }
+
+  .whitebalk {
+    position: absolute;
+    display: flex;
+    align-items: center;       /* center vertically */
+    width: 600px;
+    height: 55px;
+    background-color:  #f8f2ed;
+    top: 50%;
+    left: 380px;
+    transform: translateY(-50%); /* center box itself vertically */
+    padding: 0 10px;
+    overflow: hidden;
+  }
+
+  .bluebalk {
+    position: absolute;
+    display: flex;
+    align-items: center;       /* center vertically */
+    width: 600px;
+    height: 55px;
+    background-color:  #00558b;
+    top: 50%;
+    left: 380px;
+    transform: translateY(-50%); /* center box itself vertically */
+    padding: 0 10px;
+    overflow: hidden;
+  }
+
+  .white-form {
+    position: absolute;
+    display: flex;
+    align-items: center;       /* center vertically */
+    width: 600px;
+    height: 55px;
+    top: 50%;
+    left: 380px;
+    transform: translateY(-50%); /* center box itself vertically */
+    overflow: hidden;
+    color: black;
+  }
+
+  .white-input {
+border: 0;
+outline: none;
+padding: 0 10px;
+padding-top: 2.5px;
+width: 600px;
+height: 55px;
+background-color: #f8f2ed;
+font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+font-weight: 600;
+font-size: 40px;
+color: black;
+  }
+
+  .white-input::placeholder {
+    color: #7f7f7f;
+  }
+
+  .white-button {
+    border: 0;
+outline: none;
+padding-top: 2.5px;
+padding: 0 0px;
+background-color: #f8f2ed;
+height: 55px;
+font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+font-weight: 600;
+font-size: 40px;
+color: black;
+cursor: pointer;
+  }
+
+  .blue-form {
+    position: absolute;
+    display: flex;
+    align-items: center;       /* center vertically */
+    width: 600px;
+    height: 55px;
+    top: 50%;
+    left: 380px;
+    transform: translateY(-50%); /* center box itself vertically */
+    overflow: hidden;
+    color: white;
+  }
+
+  .blue-input {
+border: 0;
+outline: none;
+padding: 0 10px;
+padding-top: 2.5px;
+width: 600px;
+height: 55px;
+background-color: #00558b;
+font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+font-weight: 600;
+font-size: 40px;
+color: white;
+  }
+
+  .blue-input::placeholder {
+    color: #c9c9c9;
+  }
+
+  .blue-button {
+    border: 0;
+outline: none;
+padding-top: 2.5px;
+padding: 0 0px;
+background-color:  #00558b;
+height: 55px;
+font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+font-weight: 600;
+font-size: 40px;
+color: white;
+cursor: pointer;
+  }
+
+
+

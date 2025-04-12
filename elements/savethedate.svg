@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.02 123.31">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: NHaasGroteskDSPro-65Md, 'Neue Haas Grotesk Display Pro';
+        font-size: 44px;
+        font-weight: 500;
+      }
+
+      .cls-2 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <text class="cls-1" transform="translate(0 37.73)"><tspan class="cls-6" x="0" y="0">s</tspan><tspan class="cls-3" x="21.56" y="0">a</tspan><tspan class="cls-2" x="44.35" y="0">v</tspan><tspan x="65.29" y="0">e</tspan></text>
+      <text class="cls-1" transform="translate(0 74.73)"><tspan x="0" y="0">the</tspan></text>
+      <text class="cls-1" transform="translate(0 111.74)"><tspan x="0" y="0">d</tspan><tspan class="cls-5" x="24.9" y="0">a</tspan><tspan class="cls-4" x="47.48" y="0">t</tspan><tspan x="61.91" y="0">e!</tspan></text>
+    </g>
+  </g>
+</svg>
