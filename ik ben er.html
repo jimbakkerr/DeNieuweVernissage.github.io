@@ -23,15 +23,22 @@
 
 
           <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxgV3N-vAOTWNgzZ9qjsBClUgmwRsSijGkmrZdY_iF51pNrOfMZ8lcLQfL_KFDZNrVCMQ/exec'
-            const form = document.forms['submit-to-google-sheet']
-          
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwiP0I00gsWlprTsxgVko8n9qpvXvKJHdD_QbZflKVm5rnKO1-ME6qa9kjry5LEiNJAPg/exec'; // <-- vul hier jouw URL in
+            const form = document.forms['submit-to-google-sheet'];
+            const msg = document.getElementById('msg');
+      
             form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-            })
+              e.preventDefault();
+              fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                  msg.innerHTML = "Bedankt voor je inschrijving!";
+                  form.reset();
+                })
+                .catch(error => {
+                  msg.innerHTML = "Er ging iets mis...";
+                  console.error('Error!', error.message);
+                });
+            });
           </script>
 </body>
 </html>
