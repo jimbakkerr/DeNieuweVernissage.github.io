@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Nieuwe Vernissage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
+                
+</head>
+<body>
+    <a href="index.html"><p class="denieuwe">de nieuwe</p></a>
+    <a href="index.html"><p class="vernissage">vernissage</p></a>
+<div class="container">
+<a href="" class="whitebox1"><img src="elements/samen.svg" alt="ikbener" height="120px"></a>
+<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=De+Nieuwe+Vernissage+Opening&dates=20250628/20250628&details=Tot+dan!&location=Amsterdam+(specifieke+locatie+TBA)." target="_blank" class="bluebox1">
+    <img src="elements/savethedate.svg" alt="ikbener" height="120px">
+  </a>
+<a href="index.html" class="yellowbox1"><img src="elements/komje.svg" alt="ikbener" height="80px"></a>
+<a href="" class="orangebox1"><img src="elements/popup.svg" alt="ikbener" class="orangebox1"height="130px"></a>
+</div>
+<div class="wat" id="wat"><div class="watuitleg" id="watuitleg"><img src="elements/watuitleg.svg" alt="watuitleg" width="650px"></div><img src="elements/wat.svg" alt="wat" height="30px"></div>
+
+
+<script>
+    // Basic mobile detection
+    const isMobile = window.matchMedia('(max-width: 600px)').matches;
+  
+    if (isMobile) {
+      const wat = document.getElementById('wat');
+      const uitleg = document.getElementById('watuitleg');
+      let uitlegVisible = false;
+  
+      wat.addEventListener('click', (e) => {
+        e.stopPropagation();
+        uitlegVisible = !uitlegVisible;
+        uitleg.style.opacity = uitlegVisible ? '1' : '0';
+        uitleg.style.visibility = uitlegVisible ? 'visible' : 'hidden';
+      });
+  
+      document.body.addEventListener('click', () => {
+        if (uitlegVisible) {
+          uitleg.style.opacity = '0';
+          uitleg.style.visibility = 'hidden';
+          uitlegVisible = false;
+        }
+      });
+  
+      uitleg.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    }
+  </script>
+</body>
+</html>

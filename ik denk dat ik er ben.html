@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Nieuwe Vernissage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
+                
+</head>
+<body>
+    <a href="index.html"><p class="denieuwe">de nieuwe</p></a>
+    <a href="index.html"><p class="vernissage">vernissage</p></a>
+ 
+        <div class="bluebalk"><p class="bluebalktext">email:</p></div>
+
+        <form class="blue-form" name="submit-to-google-sheet">
+            <input class="blue-input" type="email" name="Email" placeholder="email:" required />
+            <button class="blue-button" type="submit">stuur</button>
+        </form>
+        <span class="blue-span" id="msg"></span>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxnVE6EpIJblweaC2Wc06ZhTNUfDW4EtCegiqLdEVjAGGad8xQirMgytK0VKaxNv7ll/exec';
+            const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById('msg');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  // ✉️ Send form in the background
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+
+  // ⏳ Wait 0.5 seconds, then show message
+  setTimeout(() => {
+    msg.style.display = 'block';
+    msg.innerHTML = "(misschien) tot dan.";
+  }, 500); // 500ms = 0.5 seconds
+});
+
+  // 🧹 Reset the form right away
+  form.reset();
+                </script>
+</body>
+</html>
