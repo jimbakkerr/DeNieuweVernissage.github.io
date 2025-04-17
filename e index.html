@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Nieuwe Vernissage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
+    <link rel="icon" href="elements/Favicon1.png" type="image/png">
+                
+</head>
+<body>
+    <p class="denieuwe1">de nieuwe</p>
+    <p class="vernissage1">vernissage</p>
+<div class="container">
+<a href="e ik ben er.html" class="whitebox"><img src="elements-english/iwillcome.svg" alt="ikbener" height="120px"></a>
+<a href="e ik denk dat ik er ben.html" class="bluebox"><img src="elements-english/ithinkillcome.svg" alt="ikbener" height="120px"></a>
+<a href="e ik kom niet.html" class="yellowbox"><img src="elements-english/imnotcoming.svg" alt="ikbener" height="120px"></a>
+<a href="e info.html" class="orangebox"><img src="elements-english/popup.svg" alt="ikbener" height="120px"></a>
+</div>
+<div class="wat" id="wat"><div class="wat-tellie" id="wat-tellie"><img src="elements-english/what-tellie.svg" alt="wat-tellie" width="97.5%"></div><div class="watuitleg" id="watuitleg"><img src="elements-english/whatuitleg.svg" alt="watuitleg" width="650px"></div><img src="elements-english/what.svg" alt="wat" height="30px"></div>
+<a href="index.html" class="engels"><img src="elements-english/dutch.svg" alt="engels" height="30px"></div></a>
+
+<script>
+  // Basic mobile detection
+  const isMobile = window.matchMedia('(max-width: 600px)').matches;
+
+  if (isMobile) {
+    const wat = document.getElementById('wat');
+    const uitleg = document.getElementById('watuitleg');
+    const tellie = document.getElementById('wat-tellie'); // 👈 NEW
+    let uitlegVisible = false;
+
+    wat.addEventListener('click', (e) => {
+      e.stopPropagation();
+      uitlegVisible = !uitlegVisible;
+
+      uitleg.style.opacity = uitlegVisible ? '1' : '0';
+      uitleg.style.visibility = uitlegVisible ? 'visible' : 'hidden';
+
+      // 👇 show/hide wat-tellie too
+      tellie.style.opacity = uitlegVisible ? '1' : '0';
+      tellie.style.visibility = uitlegVisible ? 'visible' : 'hidden';
+    });
+
+    document.body.addEventListener('click', () => {
+      if (uitlegVisible) {
+        uitleg.style.opacity = '0';
+        uitleg.style.visibility = 'hidden';
+
+        tellie.style.opacity = '0';
+        tellie.style.visibility = 'hidden';
+
+        uitlegVisible = false;
+      }
+    });
+
+    uitleg.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    tellie.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+</script>
+</body>
+</html>
